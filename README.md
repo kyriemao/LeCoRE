@@ -4,10 +4,7 @@ This is the temporary repository of our WWW 2023 submission:
 Learning Denoised and Interpretable Session Representation for Conversational Search
 
 
-## Project Architecture
 
-
-**Our implementation is based on the excellent open-source [SPLADE repository](https://github.com/naver/splade).**
 
 ## Running Environment
 Main packages:
@@ -16,12 +13,14 @@ Main packages:
 - transformers 4.21.2
 - numpy: 1.22.4
 
+**Our implementation is based on the excellent open-source [SPLADE repository](https://github.com/naver/splade). Thanks to it!**
+
 
 ## Running Steps
 
 ### 1. Download and preprocess data.
 
-The four used public datasets can be downloaded from [QReCC](https://github.com/apple/ml-qrecc), [TopiOCQA](https://github.com/McGill-NLP/topiocqa), [CAsT-19 and CAsT-20](https://www.treccast.ai/). Refer to the [preprocess folder] for data preprocessing.
+The four used public datasets can be downloaded from [QReCC](https://github.com/apple/ml-qrecc), [TopiOCQA](https://github.com/McGill-NLP/topiocqa), [CAsT-19 and CAsT-20](https://www.treccast.ai/). Refer to the [preprocess folder] for data preprocessing and finally move all preprocessed data into a ''datasets'' folder.
 
 ### 2. Index passages
 We use the pre-trained ad-hoc SPLADE model "naver/efficient-splade-V-large-doc", which can be downloaded in huggingface, to generate passage embeddings:
@@ -39,7 +38,7 @@ python index.py --dataset=$Dataset_name \
 
 ### 3. Train LeCoRE
 
-We provide an example script for training LeCoRE. Please run:
+We provide an example script for training LeCoRE on QReCC. Please run:
 ```python
 bash scripts/train.sh
 ```
@@ -47,8 +46,8 @@ bash scripts/train.sh
 
 ### 4. Evaluate LeCoRE
 
-We provide an example script for evaluating LeCoRE. Please run:
+We provide an example script for evaluating LeCoRE on QReCC. Please run:
 ```python
-bash scripts/test.sh
+bash scripts/test.sh 4
 ```
 
