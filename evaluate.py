@@ -84,10 +84,4 @@ def eval_run_with_qrel(**eval_kwargs):
 
 
 if __name__ == "__main__":
-    with open("/data1/kelong_mao/experiments/splade_experiments/test/qrecc/original_splade/oct/run.json", "r") as f:
-        run = json.load(f)
-    eval_kwargs = {"run": run, 
-                   "qrel_file": "/data1/kelong_mao/datasets/qrecc/preprocessed/qrecc_qrel.tsv", 
-                   "rel_threshold": 1,
-                   "retrieval_output_path":"/data1/kelong_mao/experiments/splade_experiments/test/qrecc/original_splade/oct/"}
-    eval_run_with_qrel(**eval_kwargs)
+    pass
