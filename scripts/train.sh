@@ -1,7 +1,7 @@
 model_name="lecore"
 dataset="qrecc"
 output_dir_path="./experiments/train/"$dataset/$model_name
-n_gpu=1
+n_gpu=2
 negative_type="random_neg"
 neg_ratio=1
 epochs=4
@@ -28,7 +28,7 @@ train.py \
 --model_save_steps=1.0 \
 --use_data_percent=1.0 \
 --num_train_epochs=$epochs \
---per_gpu_train_batch_size=128 \
+--per_gpu_train_batch_size=64 \
 --max_doc_length=256 \
 --max_concat_length=256 \
 --max_response_length=64 \
