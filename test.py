@@ -114,7 +114,7 @@ def get_args():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--use_data_percent", type=float, default=1.0, help="Percent of samples to use. Faciliating the debugging.")
     parser.add_argument("--eval_batch_size", type=int, default=32)
-    parser.add_argument("--top_n", type=int, default=1000)
+    parser.add_argument("--top_n", type=int, default=100)
 
     # output file
     parser.add_argument("--retrieval_output_path", type=str, required=True)
