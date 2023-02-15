@@ -1,4 +1,4 @@
-# LeCoRE (Anonymous Submission of WWW 2023)
+# LeCoRE (WWW 2023)
 
 This is the temporary repository of our WWW 2023 submission: 
 Learning Denoised and Interpretable Session Representation for Conversational Search
